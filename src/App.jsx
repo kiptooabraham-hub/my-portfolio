@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import Loader from "./components/Loader";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
+import "./App.css";
+
+import Loader from "./components/Loader";
+import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
@@ -12,46 +15,39 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
-import "./App.css";
-
 function App() {
   const [loading, setLoading] = useState(true);
 
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setLoading(false);
-  }, 2000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
 
-  return () => clearTimeout(timer);
-}, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-if (loading) {
-  return <Loader />;
-}
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <BrowserRouter>
+    <>
+      <ScrollProgress />
 
       <Navbar />
 
       <Routes>
-
         <Route path="/" element={<Home />} />
-
         <Route path="/about" element={<About />} />
-
         <Route path="/skills" element={<Skills />} />
-
         <Route path="/projects" element={<Projects />} />
-
         <Route path="/contact" element={<Contact />} />
-
       </Routes>
 
       <Footer />
 
       <ScrollTop />
-
-    </BrowserRouter>
+    </>
   );
 }
 

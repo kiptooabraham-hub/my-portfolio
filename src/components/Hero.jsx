@@ -36,7 +36,7 @@ function Hero() {
             👋 Hello, I'm
           </h4>
 
-          <h1>Abrahim Kiptoo</h1>
+          <h1>Abraham Kiptoo</h1>
 
           <h2>
   <Typewriter
@@ -128,7 +128,7 @@ function Hero() {
 
   <img
     src={profile}
-    alt="Abrahim Kiptoo"
+    alt="Abraham Kiptoo"
     className="profile-image"
   />
 
