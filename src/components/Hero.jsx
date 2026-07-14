@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaArrowRight, FaRocket } from "react-icons/fa";
 import {
   FaGithub,
   FaLinkedin,
@@ -62,13 +65,31 @@ function Hero() {
 
           <div className="hero-buttons">
 
-            <a href="#projects" className="btn-primary">
-              View Projects
-            </a>
+  
+            <div className="hero-buttons">
 
-            <a href="#contact" className="btn-secondary">
-              Hire Me
-            </a>
+  <Link to="/projects" className="btn-primary">
+    View Projects <FaArrowRight />
+  </Link>
+
+  <Link to="/contact" className="btn-secondary">
+    <FaRocket />
+    Start a Project
+  </Link>
+  
+  <Link to="/cv" className="btn-secondary">
+  📄 View CV
+</Link>
+
+</div>
+            <a
+  href="https://wa.me/254113975065?text=Hi%20Abraham,%20I%20visited%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20website%20projectS."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-whatsapp"
+>
+  <FaWhatsapp /> WhatsApp Me
+</a>
 
           </div>
 

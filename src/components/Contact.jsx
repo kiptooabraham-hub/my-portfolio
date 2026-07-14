@@ -9,16 +9,15 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-function Contact() {
+import contactBg from "../assets/backgrounds/contact.jpg";
 
+function Contact() {
   const form = useRef();
 
   const [sending, setSending] = useState(false);
-
   const [success, setSuccess] = useState("");
 
   const sendEmail = (e) => {
-
     e.preventDefault();
 
     setSending(true);
@@ -31,30 +30,25 @@ function Contact() {
         "GWX1IZFGqVW3lwC0h"
       )
       .then(() => {
-
         setSuccess("✅ Message sent successfully!");
-
         form.current.reset();
-
       })
       .catch((error) => {
-
-  console.error("EmailJS Error:", error);
-
-  setSuccess(`❌ ${error.text || "Failed to send message."}`);
-
-})
+        console.error("EmailJS Error:", error);
+        setSuccess(`❌ ${error.text || "Failed to send message."}`);
+      })
       .finally(() => {
-
         setSending(false);
-
       });
-
   };
+
   return (
     <motion.section
       id="contact"
       className="contact"
+      style={{
+        backgroundImage: `linear-gradient(rgba(15,23,42,.88), rgba(15,23,42,.88)), url(${contactBg})`,
+      }}
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -69,7 +63,7 @@ function Contact() {
 
       <div className="contact-container">
 
-        {/* Contact Info */}
+        {/* Contact Information */}
 
         <div className="contact-info">
 
@@ -93,7 +87,7 @@ function Contact() {
             <FaMapMarkerAlt className="contact-icon" />
             <div>
               <h4>Location</h4>
-              <p>Kericho,Kenya</p>
+              <p>Kericho, Kenya</p>
             </div>
           </div>
 
@@ -122,52 +116,56 @@ function Contact() {
         {/* Contact Form */}
 
         <form
-  ref={form}
-  onSubmit={sendEmail}
-  className="contact-form"
->
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact-form"
+        >
 
           <input
-  type="text"
-  name="from_name"
-  placeholder="Your Name"
-  required
-/>
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+          />
+
           <input
-  type="email"
-  name="from_email"
-  placeholder="Your Email"
-  required
-/>
-<input
-  type="text"
-  name="subject"
-  placeholder="Subject"
-  required
-/>
+            type="email"
+            name="from_email"
+            placeholder="Your Email"
+            required
+          />
+
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+          />
 
           <textarea
-  rows="6"
-  name="message"
-  placeholder="Your Message"
-  required
-></textarea>
+            rows="6"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
 
           <button
-  type="submit"
-  disabled={sending}
->
-  {sending ? "Sending..." : "Send Message"}
-</button>
-{success && (
-  <p className="success-message">
-    {success}
-  </p>
-)}
+            type="submit"
+            disabled={sending}
+          >
+            {sending ? "Sending..." : "Send Message"}
+          </button>
+
+          {success && (
+            <p className="success-message">
+              {success}
+            </p>
+          )}
 
         </form>
 
       </div>
+
     </motion.section>
   );
 }

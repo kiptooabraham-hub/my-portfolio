@@ -1,3 +1,4 @@
+import aboutBg from "../assets/backgrounds/about.jpg";
 import { motion } from "framer-motion";
 
 function About() {
@@ -10,6 +11,12 @@ function About() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
+      <section
+  className="about"
+  style={{
+    backgroundImage: `linear-gradient(rgba(15,23,42,.88), rgba(15,23,42,.88)), url(${aboutBg})`,
+  }}
+></section>
       <h2>About Me</h2>
 
       <div className="about-container">
@@ -17,7 +24,7 @@ function About() {
         <div className="about-text">
 
           <p>
-            I'm <strong>Abrahim Kiptoo</strong>, a passionate software developer
+            I'm <strong>Abrahim Kiptoo</strong>, a passionate full stack developer
             with a strong interest in building beautiful, responsive and
             user-friendly web applications among other services.
           </p>
@@ -34,14 +41,6 @@ function About() {
 
           </p>
 
-          <a
-            href="/cv.pdf"
-            className="btn-primary"
-            download
-          >
-            Download CV
-          </a>
-
         </div>
 
         <div className="about-cards">
@@ -53,7 +52,7 @@ function About() {
 
           <div className="about-card">
             <h3>💻 Focus</h3>
-            <p>Frontend & React Development</p>
+            <p>Full Stack Development</p>
           </div>
 
           <div className="about-card">

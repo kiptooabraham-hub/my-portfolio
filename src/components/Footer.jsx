@@ -8,44 +8,47 @@ function Footer() {
   return (
     <footer className="footer">
 
-      <h2 className="footer-logo">
-        Abraham <span>Kiptoo</span>
-      </h2>
+      <div className="footer-content">
 
-      <p>
-        Building modern responsive web experiences.
-      </p>
+        <h2 className="footer-logo">
+          <span>Abraham</span> Kiptoo
+        </h2>
 
-      <div className="footer-social">
+        <p>
+          Building modern responsive web experiences.
+        </p>
 
-        <a
-          href="https://github.com/Kiptooabraham-hub"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaGithub />
-        </a>
+        <div className="footer-social">
 
-        <a
-          href="https://linkedin.com/in/YOUR_USERNAME"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedin />
-        </a>
+          <a
+            href="https://github.com/Kiptooabraham-hub"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
 
-        <a href="mailto:ptooibrahim@gmail.com">
-          <FaEnvelope />
-        </a>
+          <a
+            href="https://linkedin.com/in/YOUR_USERNAME"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a href="mailto:ptooibrahim@gmail.com">
+            <FaEnvelope />
+          </a>
+
+        </div>
+
+        <hr />
+
+        <div className="footer-bottom">
+          © {new Date().getFullYear()} Abraham Kiptoo. All Rights Reserved.
+        </div>
 
       </div>
-
-      <hr />
-
-      <p className="copyright">
-        © {new Date().getFullYear()} Abraham Kiptoo.
-        All Rights Reserved.
-      </p>
 
     </footer>
   );

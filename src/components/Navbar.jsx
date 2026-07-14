@@ -1,35 +1,42 @@
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
+
       <div className="logo">
-  <img src={logo} alt="Abraham Kiptoo Logo" />
-</div>
+        <img src={logo} alt="Abraham Kiptoo Logo" />
+      </div>
 
       <ul className="nav-links">
 
-  <li>
-    <Link to="/">Home</Link>
-  </li>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
 
-  <li>
-    <Link to="/about">About</Link>
-  </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
 
-  <li>
-    <Link to="/skills">Skills</Link>
-  </li>
+        <li>
+          <NavLink to="/skills">Skills</NavLink>
+        </li>
 
-  <li>
-    <Link to="/projects">Projects</Link>
-  </li>
+        <li>
+          <NavLink to="/projects">Projects</NavLink>
+        </li>
 
-  <li>
-    <Link to="/contact">Contact</Link>
-  </li>
+        <li>
+          <NavLink to="/cv">CV</NavLink>
+        </li>
 
-</ul>
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
+        </li>
+
+      </ul>
+
     </nav>
   );
 }

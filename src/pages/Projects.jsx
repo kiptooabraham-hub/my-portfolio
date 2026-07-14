@@ -1,3 +1,4 @@
+import projectsBg from "../assets/backgrounds/projects.jpg";
 import { motion } from "framer-motion";
 import {
   FaCode,
@@ -56,6 +57,12 @@ function Projects() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
+      <section
+  className="projects"
+  style={{
+    backgroundImage: `linear-gradient(rgba(15,23,42,.88), rgba(15,23,42,.88)), url(${projectsBg})`,
+  }}
+></section>
       <h2>Projects In Development</h2>
 
       <p className="projects-subtitle">

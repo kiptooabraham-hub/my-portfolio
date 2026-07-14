@@ -1,3 +1,4 @@
+import contactBg from "../assets/backgrounds/contact.jpg";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ContactSection from "../components/Contact";
@@ -44,5 +45,10 @@ function Contact() {
   };
   return <ContactSection />;
 }
-
+<section
+  className="contact"
+  style={{
+    backgroundImage: `linear-gradient(rgba(15,23,42,.88), rgba(15,23,42,.88)), url(${contactBg})`,
+  }}
+></section>
 export default Contact;
