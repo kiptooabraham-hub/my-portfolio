@@ -1,15 +1,24 @@
-import AboutSection from "../components/About";
+import { motion } from "framer-motion";
 import aboutBg from "../assets/backgrounds/about.jpg";
-
-<section
-  className="about"
-  style={{
-    backgroundImage: `linear-gradient(rgba(15,23,42,.88), rgba(15,23,42,.88)), url(${aboutBg})`,
-  }}
-></section>
+import AboutSection from "../components/About";
 
 function About() {
-  return <AboutSection />;
+  return (
+    <motion.section
+      className="about"
+      style={{
+        backgroundImage: `linear-gradient(rgba(15,23,42,.60), rgba(15,23,42,.60)), url(${aboutBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      initial={{ opacity: 0, y: 80 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <AboutSection />
+    </motion.section>
+  );
 }
 
 export default About;

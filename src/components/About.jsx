@@ -1,68 +1,101 @@
-import aboutBg from "../assets/backgrounds/about.jpg";
 import { motion } from "framer-motion";
 
 function About() {
   return (
     <motion.section
       id="about"
-      className="about"
+      className="about-content"
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <section
-  className="about"
-  style={{
-    backgroundImage: `linear-gradient(rgba(15,23,42,.88), rgba(15,23,42,.88)), url(${aboutBg})`,
-  }}
-></section>
       <h2>About Me</h2>
 
       <div className="about-container">
 
+        {/* Left Section */}
         <div className="about-text">
 
+          <h3>Who I Am</h3>
+
           <p>
-            I'm <strong>Abrahim Kiptoo</strong>, a passionate full stack developer
-            with a strong interest in building beautiful, responsive and
-            user-friendly web applications among other services.
+            Hello! I'm <strong>Abraham Kiptoo</strong>, a passionate Full stack Developer committed to building modern, responsive and
+            user-friendly web applications that solve real-world problems.
           </p>
 
           <p>
-            I specialize in React, JavaScript, HTML and CSS and I'm currently
-            expanding my skills into backend development to become a
-            full-stack software engineer.
+            My journey began with frontend development and I'm now fully expanding
+            into full-stack development using React, Node.js, Express and
+            MongoDB among other technologies to create complete web solutions.
           </p>
 
-          <p>
-            I enjoy solving real-world problems through technology, learning
-            new tools and building projects that improve people's lives, solving problems.
+          <div className="about-highlights">
 
-          </p>
+            <div className="highlight">
+              <h4>🚀 Current Focus</h4>
+              <p>Building modern full-stack web applications.</p>
+            </div>
+
+            <div className="highlight">
+              <h4>💡 Passion</h4>
+              <p>Creating clean, responsive and user-friendly interfaces.</p>
+            </div>
+
+            <div className="highlight">
+              <h4>📚 Currently Learning</h4>
+              <p>REST APIs, Authentication, Express & MongoDB.</p>
+            </div>
+
+            <div className="highlight">
+              <h4>🎯 Mission</h4>
+              <p>Deliver reliable software that helps businesses grow.</p>
+            </div>
+
+          </div>
 
         </div>
 
+        {/* Right Section */}
         <div className="about-cards">
 
           <div className="about-card">
-            <h3>📍 Location</h3>
+            <h3>📍 Based In</h3>
             <p>Kericho, Kenya</p>
           </div>
 
           <div className="about-card">
-            <h3>💻 Focus</h3>
-            <p>Full Stack Development</p>
+            <h3>💻 Specialization</h3>
+            <p>Full-Stack Development</p>
           </div>
 
           <div className="about-card">
-            <h3>🚀 Goal</h3>
-            <p>Become a Full-Stack Software Engineer</p>
+            <h3>⚙️ Technologies</h3>
+            <p>
+              React • JavaScript • HTML • CSS • Node.js • Express • MongoDB
+            </p>
           </div>
 
           <div className="about-card">
-            <h3>📚 Learning</h3>
-            <p>Node.js • Express • MongoDB</p>
+            <h3>🌍 Availability</h3>
+            <p>
+              Open to freelance, internships, collaborations and full-time opportunities.
+            </p>
+          </div>
+
+          <div className="about-card">
+            <h3>🎯 Career Goal</h3>
+            <p>
+              To become a highly skilled full stack developer building scalable,
+              impactful digital products.
+            </p>
+          </div>
+
+          <div className="about-card">
+            <h3>🤝 Let's Connect</h3>
+            <p>
+              I'm always excited to discuss new ideas, projects and opportunities.
+            </p>
           </div>
 
         </div>
